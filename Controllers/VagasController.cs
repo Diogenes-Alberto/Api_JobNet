@@ -61,7 +61,7 @@ namespace projeto_gama_jobsnet.Controllers
                 return NotFound();
             }
 
-            bool validado= _context.Vagas.Any(x => x.NomeVaga.Equals(vaga.NomeVaga)&&x.VagaId!=vaga.VagaId) ;
+            bool validado= await _context.Vagas.AnyAsync(x => x.NomeVaga.Equals(vaga.NomeVaga)&&x.VagaId!=vaga.VagaId) ;
 
             if(validado)
             {
