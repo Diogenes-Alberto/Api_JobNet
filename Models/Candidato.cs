@@ -34,9 +34,10 @@ namespace projeto_gama_jobsnet.Models
 
 
    
-    [Column("data_nascimento", TypeName = "date")]
+    [Column("data_nascimento", TypeName = "varchar")]
+    [MaxLength(14)]
     [Required(ErrorMessage="A Data de nascimento é obrigatório")]
-    public DateTime  DataNascimento{get; set;}
+    public string  DataNascimento{get; set;}
 
 
    
@@ -107,12 +108,13 @@ namespace projeto_gama_jobsnet.Models
 
     
 
-    [Column("possui_veiculo",TypeName="bit" )]
-    public Boolean PossuiVeiculo{get; set;}
+    [Column("possui_veiculo",TypeName="varchar" )]
+    [MaxLength(20)]
+    public string PossuiVeiculo{get; set;}
 
     [Column("habilitacao", TypeName = "varchar")]
     [MaxLength(20)]
-    public String TipoHabilitacao{get; set;}
+    public string TipoHabilitacao{get; set;}
 
     [Column("vaga_id", TypeName = "int")]
     [ForeignKey("VagaId")]

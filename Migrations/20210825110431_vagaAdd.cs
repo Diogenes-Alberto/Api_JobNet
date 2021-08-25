@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace projeto_gama_jobsnet.Migrations
 {
@@ -30,7 +29,7 @@ namespace projeto_gama_jobsnet.Migrations
                     nome = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
                     estado_civil = table.Column<string>(type: "varchar(10)", maxLength: 10, nullable: false),
                     genero = table.Column<string>(type: "varchar(10)", maxLength: 10, nullable: false),
-                    data_nascimento = table.Column<DateTime>(type: "date", nullable: false),
+                    data_nascimento = table.Column<string>(type: "varchar(14)", maxLength: 14, nullable: false),
                     cep = table.Column<string>(type: "varchar(14)", maxLength: 14, nullable: false),
                     endereco = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
                     numero = table.Column<string>(type: "varchar(10)", maxLength: 10, nullable: false),
@@ -43,7 +42,7 @@ namespace projeto_gama_jobsnet.Migrations
                     email = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: true),
                     cpf = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: true),
                     rg = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: true),
-                    possui_veiculo = table.Column<bool>(type: "bit", nullable: false),
+                    possui_veiculo = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: true),
                     habilitacao = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: true),
                     vaga_id = table.Column<int>(type: "int", nullable: false)
                 },
